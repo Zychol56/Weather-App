@@ -72,11 +72,10 @@ function main(){
     let Charts = document.querySelector(".weather_chart").getContext("2d");
     let temp12 = [];
     let hours12 = [];
-    let proxy = "https://cors-anywhere.herokuapp.com/"
     let api = `https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
-    fetch(api, {mode: "no-cors"})
+    fetch(api)
     .then(response=>{
-        return response.json()
+        return response.json() 
     })
 
     .then(datas =>{
