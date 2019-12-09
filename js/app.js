@@ -72,11 +72,10 @@ function main(){
     let Charts = document.querySelector(".weather_chart").getContext("2d");
     let temp12 = [];
     let hours12 = [];
-    let api = `https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
-    fetch(api)
-    .then(response=>{
-        return response.json() 
-    })
+    let proxy = "https://cors-anywhere.herokuapp.com/"
+    let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
+    fetch(api, {mode: 'cors'})
+    .then(response=>{return response.json();})
 
     .then(datas =>{
         // Time Hourly + Icon Hourly
@@ -93,15 +92,15 @@ function main(){
 
                 let date = new Date();
                 let weekdays = new Array(7);
-                weekdays[1] = "Sunday";
-                weekdays[2] = "Monday";
-                weekdays[3] = "Tuesday";
-                weekdays[4] = "Wednesday";
-                weekdays[5] = "Thursday";
-                weekdays[6] = "Friday";
-                weekdays[7] = "Saturday";
-                for(i=0; i<=5; i++){
-                oneday[i].textContent = weekdays[date.getDay() + i];
+                weekdays[0] = "Sunday";
+                weekdays[1] = "Monday";
+                weekdays[2] = "Tuesday";
+                weekdays[3] = "Wednesday";
+                weekdays[4] = "Thursday";
+                weekdays[5] = "Friday";
+                weekdays[6] = "Saturday";
+                for(i=0; i<=4; i++){
+                oneday[i].textContent = weekdays[date.getDay() + i + 1];
                 }
             }
             myDay()
@@ -169,7 +168,7 @@ function main(){
         })
                             // Temperature Hourly + Currently
                             function tempHourly(){
-                                for(i=1; i<=6; i++){
+                                for(i=1; i<=5; i++){
                                     if(far.checked == true){
                                     tempDailyMin[i-1].textContent = Math.floor(datas.daily.data[i].temperatureLow) + "°F"
                                     tempDailyMax[i-1].textContent = Math.floor(datas.daily.data[i].temperatureHigh) + "°F"
