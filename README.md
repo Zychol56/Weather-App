@@ -9,6 +9,7 @@
 <li>Weather for week(Icons, temperature and day)</li>
 <li>Custom sidebar</li>
 <li>Chart for next 12 hours</li>
+<li>Build with <b>HTML</b>, <b>CSS</b> and of course<b>JavaScript</b></li>
 <h2>API what i use</h2>
 <li>Download a API to search Location from <a href="https://opencagedata.com/">Opencagedata</a></li>
 <li>Get proxy from <a href="https://cors-anywhere.herokuapp.com/">Gerokuapp</a></li>
