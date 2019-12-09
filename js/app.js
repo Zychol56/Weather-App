@@ -92,13 +92,13 @@ function main(){
 
                 let date = new Date();
                 let weekdays = new Array(7);
-                weekdays[0] = "Sunday";
-                weekdays[1] = "Monday";
-                weekdays[2] = "Tuesday";
-                weekdays[3] = "Wednesday";
-                weekdays[4] = "Thursday";
-                weekdays[5] = "Friday";
-                weekdays[6] = "Saturday";
+                weekdays[1] = "Sunday";
+                weekdays[2] = "Monday";
+                weekdays[3] = "Tuesday";
+                weekdays[4] = "Wednesday";
+                weekdays[5] = "Thursday";
+                weekdays[6] = "Friday";
+                weekdays[7] = "Saturday";
                 for(i=1; i<=6; i++){
                 oneday[i].textContent = weekdays[date.getDay() + i];
                 }
