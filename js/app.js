@@ -74,7 +74,7 @@ function main(){
     let hours12 = [];
     let proxy = "https://cors-anywhere.herokuapp.com/"
     let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
-    fetch(api, {mode: 'cors'})
+    fetch(api)
     .then(response=>{return response.json();})
 
     .then(datas =>{
