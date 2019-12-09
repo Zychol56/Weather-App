@@ -100,7 +100,7 @@ function main(){
                 weekdays[5] = "Friday";
                 weekdays[6] = "Saturday";
                 for(i=0; i<=5; i++){
-                oneday[i].textContent = weekdays[date.getDay() + i + 1];
+                oneday[i].textContent = weekdays[date.getDay() + i];
                 }
             }
             myDay()
