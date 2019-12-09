@@ -1,0 +1,123 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background-image: linear-gradient(to bottom, #051937, #022c60, #00418c, #0056bb, #126beb);
+    color: white;
+    height: 100vh;
+    margin: 0;
+}
+.basic{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+h2,p{
+    margin: 10px;
+}
+.temperature{
+    font-size: 72px;
+    font-weight: 100;
+}
+.location{
+    font-family: 'Archivo Black', sans-serif;
+    font-size:44px;
+}
+.today-box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+.hourly{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: none;
+    border-left: none;
+}
+.onehour{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: none;
+    border-bottom: none;
+}
+/* Switch */
+.switch {
+  margin: 2rem auto;
+}
+.switch {
+  position: relative;
+  width: 9rem;
+  height: 1.5rem;
+  margin: 0 auto;
+  font-size: 0;
+  margin-bottom: .5rem;
+}
+.switch input {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 6rem;
+  left: 3rem;
+  margin: 0;
+}
+.switch input:checked {
+  z-index: 1;
+}
+.switch input:checked + label {
+  opacity: 1;
+  cursor: default;
+}
+.switch input:not(:checked) + label:hover {
+  opacity: .5;
+}
+.switch label {
+  color: #fff;
+  opacity: .33;
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  width: 3rem;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+.switch .toggle-outside {
+  height: 75%;
+  border-radius: 1rem;
+  padding:.25rem;
+  overflow: hidden;
+  transition: 0.25s ease all;
+  background: #fff;
+  position: absolute;
+  width: 2.45rem;
+  left: 3rem;
+}
+.switch .toggle-inside {
+  border-radius: 5rem;
+  background: #222;
+  position: absolute;
+  transition: 0.25s ease all;
+  height: 1.25rem;
+  width: 1.25rem;
+  top: 0.2rem;
+}
+.switch label:last-of-type {
+  margin-left: 3rem;
+}
+.switch input:checked ~ .toggle-outside .toggle-inside {
+  left: 0.2rem;
+}
+.switch input ~ input:checked ~ .toggle-outside .toggle-inside {
+  left: 1.5rem;
+}
