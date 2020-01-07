@@ -1,5 +1,5 @@
 # Weather-App by Jakub Zychowicz
-<h2>Some Feauters</h2>
+<h2>Some Features</h2>
 <li>Search a city with Longitude and Latitude (geolocalization)</li>
 <li>Search a city with city name. If you don’t want to share your location just search the city</li>
 <li>Display a current Day</li>
