@@ -14,5 +14,5 @@
 <li>Weather from <a href="https://darksky.net/">DarkSky</a></li>
 <li>Download a API to search Location from <a href="https://opencagedata.com/">Opencagedata</a></li>
 <li>Get proxy from <a href="https://cors-anywhere.herokuapp.com/">Gerokuapp</a></li>
-<li>Download Icons from <a href="https://darkskyapp.github.io/skycons/">SkyCons</a></li>
+<li>Download icons from <a href="https://darkskyapp.github.io/skycons/">SkyCons</a></li>
 <li>Charts from <a href="https://www.chartjs.org/">ChartJS</a></li>
