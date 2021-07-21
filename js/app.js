@@ -1,6 +1,5 @@
 let lat;
 let long;
-let data;
 let latInput = document.querySelector(".lat_input");
 let noLatSubmit = document.querySelector(".lat_submit");
 let noLat = document.querySelector(".no_lat");
@@ -39,7 +38,6 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             fetch(apicity)
             .then(response=>{return response.json();})
             .then(data =>{
-                data = data
                     for(i=0; i < data.results.length; i++){
                         console.log(data.results)
                         if(data.results.length != 0){
@@ -76,7 +74,7 @@ function main(){
     let Charts = document.querySelector(".weather_chart").getContext("2d");
     let temp12 = [];
     let hours12 = [];
-    let proxy = "https://cors-anywhere.herokuapp.com/"
+    let proxy = "https://cors-proxy.htmldriven.com/?url="
     let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
     fetch(api, {mode: 'cors'})
     .then(response=>{return response.json();})
