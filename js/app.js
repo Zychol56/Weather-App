@@ -1,5 +1,6 @@
 let lat;
 let long;
+let data;
 let latInput = document.querySelector(".lat_input");
 let noLatSubmit = document.querySelector(".lat_submit");
 let noLat = document.querySelector(".no_lat");
@@ -13,11 +14,12 @@ let city = document.querySelector(".city");
 let changeLoc = document.querySelector(".change_loc");
 let mainCont = document.querySelector(".main");
 
-changeLoc.addEventListener("click", errors)
+changeLoc.addEventListener("click", errors);
 
 navigator.geolocation.getCurrentPosition(succes,errors);
 
-    function succes(position){  
+    function succes(position){
+        console.log(position);
         lat = (position.coords.latitude);
         long = (position.coords.longitude);
         main();
@@ -37,7 +39,9 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             fetch(apicity)
             .then(response=>{return response.json();})
             .then(data =>{
+                data = data
                     for(i=0; i < data.results.length; i++){
+                        console.log(data.results)
                         if(data.results.length != 0){
                     latOpt[i].textContent = data.results[i].formatted;
                     latOpt[i].style.display = "block";
