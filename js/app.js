@@ -35,7 +35,12 @@ navigator.geolocation.getCurrentPosition(succes,errors);
               }
             latVal = latInput.value;
             apicity = `https://cors-proxy.htmldriven.com/?url=https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
-            fetch(apicity)
+            fetch(apicity,{
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                   }
+            })
             .then(response=>{return response.json();})
             .then(data =>{
                     for(i=0; i < data.results.length; i++){
