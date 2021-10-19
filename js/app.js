@@ -79,7 +79,7 @@ function main(){
     let Charts = document.querySelector(".weather_chart").getContext("2d");
     let temp12 = [];
     let hours12 = [];
-    let proxy = "https://cors-proxy.htmldriven.com/?url="
+    let proxy = "https://thingproxy.freeboard.io/fetch/"
     let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
     fetch(api, {
         headers : { 
