@@ -37,8 +37,9 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             latVal = latInput.value;
             apicity = `${proxy}https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
             fetch(apicity)
-            .then((response) => response.json())
-            .then((data) =>{
+            .then(response => response.json())
+            .then(data =>{
+                console.log(data)
                     for(i=0; i < data.results.length; i++){
                         console.log(data.results)
                         if(data.results.length != 0){
@@ -82,7 +83,6 @@ function main(){
     .then(datas =>{
         // Time Hourly + Icon Hourly
             for(i=1; i<=6; i++){
-                console.log(datas)
                 const skycons = new Skycons({color: "white"});
                 let icon = datas.daily.data[i].icon
                 const curIcon = icon.replace(/-/g, "_").toUpperCase();
