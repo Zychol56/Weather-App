@@ -59,6 +59,9 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                     }
                 } 
             })
+            .catch( (s) => {
+                console.log(s)
+            })
         })
     }
 
