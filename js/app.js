@@ -82,7 +82,7 @@ function main(){
     .then(datas =>{
         // Time Hourly + Icon Hourly
             for(i=1; i<=6; i++){
-                console.log(datas)
+                console.log(datas.contents)
                 const skycons = new Skycons({color: "white"});
                 let icon = datas.daily.data[i].icon
                 const curIcon = icon.replace(/-/g, "_").toUpperCase();
