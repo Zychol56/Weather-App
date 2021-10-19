@@ -75,7 +75,7 @@ function main(){
     let temp12 = [];
     let hours12 = [];
     let proxy = "https://crossorigin.me/"
-    let api = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`)}`
+    let api = `https://api.allorigins.win/get?url=https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`
     fetch(api)
     .then(response=> response.json())
 
