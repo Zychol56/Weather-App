@@ -38,6 +38,7 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             fetch(apicity)
             .then(response=>{return response.json();})
             .then(data =>{
+                console.log(data.results)
                     for(i=0; i < data.results.length; i++){
                         console.log(data.results)
                         if(data.results.length != 0){
