@@ -46,7 +46,7 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                     for(i=0; i < data.results.length; i++){
                         console.log(data.results)
                         if(data.results.length != 0){
-                    latOpt[i].textContent = data.results[i].formatted;
+                    latOpt[i].innerHTML = data.results[i].formatted;
                     latOpt[i].style.display = "block";
                     latOpt[i].addEventListener("click", ((j) => {
                         return function() {
