@@ -41,8 +41,8 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                     'Accept': 'application/json'
                    }
             })
-            .then(response=>{return response.json();})
-            .then(data =>{
+            .then((response) => response.json())
+            .then((data) =>{
                     for(i=0; i < data.results.length; i++){
                         console.log(data.results)
                         if(data.results.length != 0){
