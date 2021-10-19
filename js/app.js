@@ -37,7 +37,7 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             apicity = `https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
             fetch(apicity)
             .then(response => response.json())
-            .then(function (data) {
+            .then(data => {
                 for(i=0; i < data.results.length; i++){
                     if(data.results.length != 0){
                         latOpt[i].style.display = "block";
