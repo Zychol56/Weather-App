@@ -35,9 +35,9 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                 latOpt[i].style.display = "none";
               }
             latVal = latInput.value;
-            apicity = `${proxy}https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
+            apicity = `https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
             fetch(apicity)
-            .then(response => JSON.parse(response))
+            .then(response => response.json())
             .then(data =>{
                 console.log(data)
                     for(i=0; i < data.results.length; i++){
