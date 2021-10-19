@@ -4,11 +4,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let latInput = document.querySelector(".lat_input");
     let noLatSubmit = document.querySelector(".lat_submit");
     let noLat = document.querySelector(".no_lat");
-    let LatVal;
     let apicity;
-    let latcont = document.querySelector(".lat_container");
     let latOpt = document.querySelectorAll(".lat_opt");
-    let iter;
     let citydesc = document.querySelector(".city_desc");
     let city = document.querySelector(".city");
     let changeLoc = document.querySelector(".change_loc");
