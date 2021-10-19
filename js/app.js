@@ -12,7 +12,7 @@ let citydesc = document.querySelector(".city_desc");
 let city = document.querySelector(".city");
 let changeLoc = document.querySelector(".change_loc");
 let mainCont = document.querySelector(".main");
-let proxy = "https://api.allorigins.win/get?url=";
+let proxy = "https://api.allorigins.win/post?url=";
 
 changeLoc.addEventListener("click", errors);
 
