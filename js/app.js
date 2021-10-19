@@ -12,7 +12,7 @@ let citydesc = document.querySelector(".city_desc");
 let city = document.querySelector(".city");
 let changeLoc = document.querySelector(".change_loc");
 let mainCont = document.querySelector(".main");
-let proxy = "https://api.codetabs.com/v1/proxy?quest=";
+let proxy = "https://api.allorigins.win/raw?url=";
 
 changeLoc.addEventListener("click", errors);
 
