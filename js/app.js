@@ -34,11 +34,10 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                 latOpt[i].style.display = "none";
               }
             latVal = latInput.value;
-            apicity = `https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
+            apicity = `https://cors-proxy.htmldriven.com/?url=https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
             fetch(apicity)
             .then(response=>{return response.json();})
             .then(data =>{
-                console.log(data.results)
                     for(i=0; i < data.results.length; i++){
                         console.log(data.results)
                         if(data.results.length != 0){
