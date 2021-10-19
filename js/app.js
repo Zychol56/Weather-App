@@ -40,10 +40,10 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             .then(data =>{
                     for(i=0; i < data.results.length; i++){
                         if(data.results.length != 0){
-                            () => {
+
                                 latOpt[i].textContent = data.results[i].formatted;
                                 latOpt[i].style.display = "block";
-                            }
+                            
                     latOpt[i].addEventListener("click", ((j) => {
                         return function () {
                             lat = data.results[j].geometry.lat
