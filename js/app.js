@@ -35,10 +35,7 @@ navigator.geolocation.getCurrentPosition(succes,errors);
               }
             latVal = latInput.value;
             apicity = `https://cors-proxy.htmldriven.com/?url=https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
-            fetch(apicity, {
-                credentials: 'include'
-              }
-            )
+            fetch(apicity)
             .then((response) => response.json())
             .then((data) =>{
                     for(i=0; i < data.results.length; i++){
@@ -79,9 +76,7 @@ function main(){
     let hours12 = [];
     let proxy = "https://cors-proxy.htmldriven.com/?url="
     let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
-    fetch(api, {
-        credentials: 'include'
-      })
+    fetch(api)
     .then(response=> response.json())
 
     .then(datas =>{
