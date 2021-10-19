@@ -40,16 +40,19 @@ navigator.geolocation.getCurrentPosition(succes,errors);
             .then(data =>{
                     for(i=0; i < data.results.length; i++){
                         if(data.results.length != 0){
-                    latOpt[i].style.display = "block";
+                            return function (){
                     latOpt[i].textContent = data.results[i].formatted;
+                    latOpt[i].style.display = "block";
                     latOpt[i].addEventListener("click", ((j) => {
+                        return function() {
                             lat = data.results[j].geometry.lat
                             long = data.results[j].geometry.lng
                             noLat.style.display = "none";
                             citydesc.style.display = "none";
                             mainCont.style.display = "block";
-                            main();            
-                      })(i))
+                            main();
+                        }
+                      })(i))}
                     }
                     else{
                         latOpt[i].style.display = "none";
