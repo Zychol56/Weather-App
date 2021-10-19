@@ -59,9 +59,6 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                     }
                 } 
             })
-            .catch( (s) => {
-                console.log(s)
-            })
         })
     }
 
@@ -209,6 +206,9 @@ function main(){
                             }
                             tempHourly()
 
+    })            
+    .catch( (s) => {
+        console.log(s)
     })
     const OpenCageData = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`
     fetch(OpenCageData)
