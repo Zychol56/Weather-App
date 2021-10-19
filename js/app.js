@@ -77,7 +77,7 @@ function main(){
     let proxy = "https://crossorigin.me/"
     let api = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`)}`
     fetch(api)
-    .then(response=> response)
+    .then(response=> response.json())
 
     .then(datas =>{
         // Time Hourly + Icon Hourly
