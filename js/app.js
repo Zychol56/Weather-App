@@ -75,14 +75,14 @@ function main(){
     let temp12 = [];
     let hours12 = [];
     let proxy = "https://crossorigin.me/"
-    let api =     `https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`)}`
+    let api = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`)}`
     fetch(api)
     .then(response=> response.json())
 
     .then(datas =>{
         // Time Hourly + Icon Hourly
             for(i=1; i<=6; i++){
-
+                console.log(datas)
                 const skycons = new Skycons({color: "white"});
                 let icon = datas.daily.data[i].icon
                 const curIcon = icon.replace(/-/g, "_").toUpperCase();
