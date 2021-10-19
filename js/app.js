@@ -12,6 +12,7 @@ let citydesc = document.querySelector(".city_desc");
 let city = document.querySelector(".city");
 let changeLoc = document.querySelector(".change_loc");
 let mainCont = document.querySelector(".main");
+let proxy = "https://api.allorigins.win/get?url=";
 
 changeLoc.addEventListener("click", errors);
 
@@ -34,7 +35,7 @@ navigator.geolocation.getCurrentPosition(succes,errors);
                 latOpt[i].style.display = "none";
               }
             latVal = latInput.value;
-            apicity = `https://cors-proxy.htmldriven.com/?url=https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
+            apicity = `${proxy}?url=https://api.opencagedata.com/geocode/v1/json?q=${latVal}&key=3dd1dfb916bb45f38bd7a8a9f5ad1a6f`;
             fetch(apicity)
             .then((response) => response.json())
             .then((data) =>{
@@ -75,7 +76,7 @@ function main(){
     let temp12 = [];
     let hours12 = [];
     let proxy = "https://crossorigin.me/"
-    let api = `https://api.allorigins.win/get?url=https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`
+    let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}`
     fetch(api)
     .then(response=> response.json())
 
