@@ -82,10 +82,7 @@ function main(){
     let proxy = "https://cors-proxy.htmldriven.com/?url="
     let api = `${proxy}https://api.darksky.net/forecast/a48d967f2dc6c8171632856c53cff749/${lat},${long}` 
     fetch(api, {
-        headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-           }
+        mode: "no-cors"
     })
     .then(response=> response.json())
 
