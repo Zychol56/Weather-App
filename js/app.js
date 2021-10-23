@@ -99,7 +99,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                     for(i=0; i<=4; i++){
                     oneday[i].textContent = weekdays[date.getDay() + i + 1];
-                    console.log(weekday.getDay());
+                    console.log(weekday);
                     }
                 
 
