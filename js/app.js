@@ -87,6 +87,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
                     let date = new Date();
+                    let weekday = date.getUTCDay();
                     let weekdays = new Array(7);
                     weekdays[0] = "Sunday";
                     weekdays[1] = "Monday";
@@ -98,7 +99,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                     for(i=0; i<=4; i++){
                     oneday[i].textContent = weekdays[date.getDay() + i + 1];
-                    console.log(weekdays[date.getDay() + i + 1]);
+                    console.log(weekday.getDay());
                     }
                 
 
