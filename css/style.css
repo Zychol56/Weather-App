@@ -132,10 +132,12 @@ h2,p{
   margin: 0 auto;
 }
 .temperature_box{
-text-align: center;
-display: flex;
-flex-direction: row;
-justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5em;
 }
 .min{
   color: rgb(54, 13, 141);
