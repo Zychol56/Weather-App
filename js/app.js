@@ -85,7 +85,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     skycons.set(ico[i-1], Skycons[curIcon]);
                 }
 
-                function myDay() {
 
                     let date = new Date();
                     let weekdays = new Array(7);
@@ -96,11 +95,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     weekdays[4] = "Thursday";
                     weekdays[5] = "Friday";
                     weekdays[6] = "Saturday";
+
                     for(i=0; i<=4; i++){
                     oneday[i].textContent = weekdays[date.getDay() + i + 1];
+                    console.log(weekdays[date.getDay() + i + 1]);
                     }
-                }
-                myDay()
+                
 
         far.onchange = tempHourly
         cel.onchange = tempHourly
