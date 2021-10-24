@@ -222,7 +222,7 @@ h2,p{
   width: 80%;
   height: 50%;
 }
-@media (max-width: 768px){
+@media (max-width: 1599px){
   .hourly{
     flex-direction: column;
   }
